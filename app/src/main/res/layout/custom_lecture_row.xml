@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:padding="10dp"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:id="@+id/lecture_title_id"
+                android:text="Lecture Title"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_alignParentStart="true"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/course_name_id"
+                android:text="Course Name"
+                android:textSize="13sp"
+                android:layout_alignParentStart="true"
+                android:textColor="@android:color/black"
+                android:layout_below="@+id/lecture_title_id"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lecture_date_added_id"
+                android:text="Date Added"
+                android:layout_marginTop="10dp"
+                android:textSize="13sp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/course_name_id"
+                android:layout_alignParentBottom="true"
+                android:textColor="@android:color/black"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lecture_room_id"
+                android:layout_marginTop="10dp"
+                android:text="Lecture Room"
+                android:textSize="13sp"
+                android:textAlignment="textEnd"
+                android:textColor="@android:color/black"
+                android:layout_below="@+id/course_name_id"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                />
+
+
+        </RelativeLayout>
+
+
+</LinearLayout>

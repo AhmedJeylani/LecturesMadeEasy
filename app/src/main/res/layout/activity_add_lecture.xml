@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.AddLectureActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Lecture Title"
+        android:id="@+id/lecture_title_field_id"
+        android:inputType="textCapWords"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Course"
+        android:id="@+id/course_field_id"
+        android:layout_below="@+id/lecture_title_field_id"
+        android:inputType="textCapWords"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textCapWords"
+        android:layout_below="@+id/course_field_id"
+        android:id="@+id/lecture_room_field_id"
+        android:hint="Lecture Room"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lecture_room_field_id"
+        android:id="@+id/date_field_id"
+        android:text="Select Date"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textColor="@color/Blue"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addLecture_button_id"
+        android:layout_alignParentBottom="true"
+        android:text="Add Lecture"
+        />
+
+</RelativeLayout>

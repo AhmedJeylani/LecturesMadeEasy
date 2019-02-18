@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.LectureInfoActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lecture Title"
+        android:id="@+id/title_id"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lecture Title"
+        android:id="@+id/lecture_title_view_id"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@+id/title_id"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Course"
+        android:id="@+id/course_id"
+        android:layout_below="@+id/lecture_title_view_id"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Course"
+        android:id="@+id/course_view_id"
+        android:layout_below="@+id/course_id"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textStyle="italic"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/course_view_id"
+        android:id="@+id/room_id"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"
+        android:text="Lecture Room"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/room_id"
+        android:id="@+id/lecture_room_view_id"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        android:text="Lecture Room"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lecture_room_view_id"
+        android:id="@+id/date_id"
+        android:layout_margin="10dp"
+        android:text="Date"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date_id"
+        android:id="@+id/date_view_id"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:text="Date"
+        android:textStyle="italic"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date_view_id"
+        android:id="@+id/status_id"
+        android:layout_margin="10dp"
+        android:text="Lecture Status"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/status_id"
+        android:id="@+id/lecture_status_view_id"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:text="Lecture Status"
+        android:textStyle="italic"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lecture_status_view_id"
+        android:id="@+id/invitation_id"
+        android:layout_margin="10dp"
+        android:text="Invitation Code"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/invitation_id"
+        android:id="@+id/lecture_invitation_view_id"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:text="Invitation Code"
+        android:textStyle="italic"
+        android:textColor="@color/black"
+        />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/startLecture_button_id"
+        android:layout_alignParentBottom="true"
+        android:text="Start Lecture"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "535572319188",
+    "firebase_url": "https://lecturesmadeeasy-989f7.firebaseio.com",
+    "project_id": "lecturesmadeeasy-989f7",
+    "storage_bucket": "lecturesmadeeasy-989f7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:535572319188:android:c90a80628885ce34",
+        "android_client_info": {
+          "package_name": "com.example.ahmedjeylani.lecturesmadeeasy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "535572319188-cqcbkt8dh5fkhqj80fv8kgi8ok6ne31c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ahmedjeylani.lecturesmadeeasy",
+            "certificate_hash": "5ba38327edeca5dc77bd3c0cf5c364063adec5f8"
+          }
+        },
+        {
+          "client_id": "535572319188-26rkgsrlnsh3v77g66c5tdn23t0qdsc4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6Qpkvdgir5E_49iB1cZYTdXEzIbq_fa0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "535572319188-26rkgsrlnsh3v77g66c5tdn23t0qdsc4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

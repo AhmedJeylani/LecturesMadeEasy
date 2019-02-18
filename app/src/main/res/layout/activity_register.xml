@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.RegisterActivity">
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:id="@+id/name_field_id"
+            android:inputType="textCapWords"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:id="@+id/email_field_id"
+            android:layout_below="@+id/name_field_id"
+            android:inputType="textEmailAddress"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:layout_below="@+id/email_field_id"
+            android:id="@+id/password_field_id"
+            android:hint="Password"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:layout_below="@+id/password_field_id"
+            android:id="@+id/reenter_password_field_id"
+            android:hint="Re-Enter Password"/>
+
+        <CheckBox
+            android:id="@+id/student_checkBox_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reenter_password_field_id"
+            android:text="Check if you are a student"
+            android:checked="false"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/student_checkBox_id"
+            android:enabled="false"
+            android:visibility="invisible"
+            android:id="@+id/studentId_field_id"
+            android:hint="Student ID Number"
+            android:inputType="number"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/signUp_button_id"
+            android:layout_alignParentBottom="true"
+            android:text="Sign Up"
+            />
+</RelativeLayout>
