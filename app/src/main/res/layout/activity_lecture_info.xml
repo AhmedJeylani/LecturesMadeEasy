@@ -132,8 +132,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/startLecture_button_id"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/postlecture_button_id"
         android:text="Start Lecture"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/postlecture_button_id"
+        android:layout_alignParentBottom="true"
+        android:text="Post About Lecture"
         />
 
 </RelativeLayout>

@@ -1,20 +1,17 @@
 package com.example.ahmedjeylani.lecturesmadeeasy.Activities;
 
 import android.content.Intent;
-import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.ahmedjeylani.lecturesmadeeasy.CustomChatListAdapter;
+import com.example.ahmedjeylani.lecturesmadeeasy.CustomListAdapters.CustomChatListAdapter;
 import com.example.ahmedjeylani.lecturesmadeeasy.Models.BaseUser;
 import com.example.ahmedjeylani.lecturesmadeeasy.Models.ChatData;
 import com.example.ahmedjeylani.lecturesmadeeasy.Models.Lecture;
@@ -25,7 +22,6 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 
 import java.text.SimpleDateFormat;
@@ -76,7 +72,7 @@ public class LectureRoomActivity extends AppCompatActivity {
 
         chatRoomRef = FirebaseDatabase.getInstance().getReference().child(CHATROOMS_REF).child(lectureInfo.getUniqueID());
         chatroomUsersRef = FirebaseDatabase.getInstance().getReference().child(USERS_JOINED_CHATROOMS_REF).child(userInfo.getUniqueID());
-        usersLikedMessagesRef = FirebaseDatabase.getInstance().getReference().child(USERS_LIKED_MESSAGES).child(userInfo.getUniqueID()).child(lectureInfo.getUniqueID());
+        usersLikedMessagesRef = FirebaseDatabase.getInstance().getReference().child(USERS_LIKED_MESSAGES_REF).child(userInfo.getUniqueID()).child(lectureInfo.getUniqueID());
 
 
 //        customChatList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -137,9 +133,7 @@ public class LectureRoomActivity extends AppCompatActivity {
                 if(!TextUtils.isEmpty(inputMessage.getText().toString())) {
                     //This is for the random keys
 
-                    Date currentDate = new Date();
-                    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MMM dd, yyyy,  HH:mm", Locale.ENGLISH);
-                    String currentDateTimeString = simpleDateFormat.format(currentDate);
+                    String currentDateTimeString = SCMethods.getCurrentDataAndTime();
                     //Map<String,Object> map = new HashMap<String, Object>();
                     tempKey = chatRoomRef.push().getKey();
                     //TODO CHECK CODE THAT IS COMMENTED BELOW AND ABOVE!!!

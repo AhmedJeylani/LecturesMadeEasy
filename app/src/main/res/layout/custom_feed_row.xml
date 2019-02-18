@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:padding="10dp"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:id="@+id/professor_name_feed_id"
+            android:text="Professor"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_alignParentStart="true"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/feed_text_id"
+            android:text="Text"
+            android:textSize="13sp"
+            android:layout_alignParentStart="true"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/professor_name_feed_id"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lecture_code_id"
+            android:text="Join lecture: "
+            android:textSize="13sp"
+            android:layout_alignParentStart="true"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/feed_text_id"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/feed_upload_date_id"
+            android:text="Date Added"
+            android:layout_marginTop="10dp"
+            android:textSize="13sp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/lecture_code_id"
+            android:layout_alignParentBottom="true"
+            android:textColor="@android:color/black"
+            />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

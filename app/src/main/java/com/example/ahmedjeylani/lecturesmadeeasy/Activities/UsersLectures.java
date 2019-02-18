@@ -5,15 +5,11 @@ import android.os.Bundle;
 
 import com.example.ahmedjeylani.lecturesmadeeasy.R;
 
-public class ProfessorHomeActivity extends AppCompatActivity {
+public class UsersLectures extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_professor_home);
-
-
+        setContentView(R.layout.activity_users_lectures);
     }
-
-    
 }

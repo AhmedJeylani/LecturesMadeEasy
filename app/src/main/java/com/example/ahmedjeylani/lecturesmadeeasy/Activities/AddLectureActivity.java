@@ -93,7 +93,7 @@ public class AddLectureActivity extends AppCompatActivity {
                     addChildAndValue(lectureRoomRef, LECTURE_ROOM_KEY_NAME,lectureRoom.getText().toString());
                     addChildAndValue(lectureRoomRef, LECTURE_TITLE_KEY_NAME, lectureTitle.getText().toString());
                     addChildAndValue(lectureRoomRef, COURSE_KEY_NAME, courseName.getText().toString());
-                    addChildAndValue(lectureRoomRef, LECTURE_DATE_KEY_NAME, date.getText().toString());
+                    addChildAndValue(lectureRoomRef, DATE_KEY_NAME, date.getText().toString());
                     addChildAndValue(lectureRoomRef, LECTURE_STATUS_KEY_NAME, LectureStatus.Closed);
                     addChildAndValue(lectureRoomRef, UNIQUEID_KEY_NAME, lectureRoomRef.getKey());
                     addChildAndValue(lectureRoomRef, PROFESSOR_KEY_NAME, professorInfo.getName());

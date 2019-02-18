@@ -26,12 +26,19 @@
         <activity
             android:name=".Activities.RegisterActivity"
             android:label="@string/title_activity_register" />
-        <activity android:name=".Activities.JoinLectureActivity" />
+        <activity
+            android:name=".Activities.JoinLectureActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity android:name=".Activities.ProfessorHomeActivity" />
         <activity android:name=".Activities.LectureRoomActivity" />
-        <activity android:name=".Activities.LecturesHomeActivity" />
+        <activity android:name=".Activities.LecturesHomeActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar"/>
         <activity android:name=".Activities.AddLectureActivity" />
         <activity android:name=".Activities.LectureInfoActivity" />
+        <activity android:name=".Activities.ProfileActivity" />
+        <activity android:name=".Activities.UsersLectures" />
+        <activity android:name=".Activities.ProfessorFeedActivity" />
+        <activity android:name=".Activities.ProfessorListActivity"></activity>
     </application>
 
 </manifest>

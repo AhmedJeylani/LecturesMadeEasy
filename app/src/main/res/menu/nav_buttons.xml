@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_profileBtn_id"
+            android:icon="@drawable/ic_action_profile"
+            android:title="Profile" />
+
+        <item android:id="@+id/nav_professorsBtn_id"
+            android:icon="@drawable/ic_action_following"
+            android:title="Professors"/>
+
+        <item android:id="@+id/nav_feedBtn_id"
+            android:icon="@drawable/ic_action_feed"
+            android:title="feed"/>
+
+
+        <item android:id="@+id/nav_lecturesBtn_id"
+            android:icon="@drawable/ic_action_lectures"
+            android:title="Lectures"/>
+
+        <item
+            android:id="@+id/nav_signoutBtn_id"
+            android:icon="@drawable/ic_action_signout"
+            android:title="Sign Out"
+            />
+
+    </group>
+
+</menu>

@@ -1,4 +1,4 @@
-package com.example.ahmedjeylani.lecturesmadeeasy;
+package com.example.ahmedjeylani.lecturesmadeeasy.CustomListAdapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,14 +8,15 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.ahmedjeylani.lecturesmadeeasy.Models.Lecture;
+import com.example.ahmedjeylani.lecturesmadeeasy.R;
 
 import java.util.ArrayList;
 
-public class CustomLectureListRow extends BaseAdapter{
+public class CustomLectureListAdapter extends BaseAdapter{
     private Context context;
     private ArrayList<Lecture> lectureList;
 
-    public CustomLectureListRow(Context c, ArrayList<Lecture> list) {
+    public CustomLectureListAdapter(Context c, ArrayList<Lecture> list) {
         this.context = c;
         this.lectureList = list;
     }
@@ -49,7 +50,7 @@ public class CustomLectureListRow extends BaseAdapter{
         TextView title = (TextView) convertView.findViewById(R.id.lecture_title_id);
         TextView room = (TextView) convertView.findViewById(R.id.lecture_room_id);
         TextView date = (TextView) convertView.findViewById(R.id.lecture_date_added_id);
-        TextView courseName = (TextView) convertView.findViewById(R.id.course_name_id);
+        TextView courseName = (TextView) convertView.findViewById(R.id.feed_text_id);
 
         final Lecture singleLecture = (Lecture) this.getItem(position);
 

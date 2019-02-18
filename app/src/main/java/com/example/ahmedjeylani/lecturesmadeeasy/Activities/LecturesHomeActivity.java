@@ -5,18 +5,22 @@ import android.content.ClipboardManager;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.ahmedjeylani.lecturesmadeeasy.CustomLectureListRow;
+import com.example.ahmedjeylani.lecturesmadeeasy.CustomListAdapters.CustomLectureListAdapter;
 import com.example.ahmedjeylani.lecturesmadeeasy.Models.Lecture;
 import com.example.ahmedjeylani.lecturesmadeeasy.Models.Professor;
 import com.example.ahmedjeylani.lecturesmadeeasy.R;
@@ -29,6 +33,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 import static com.example.ahmedjeylani.lecturesmadeeasy.DatabaseStringReference.*;
 
@@ -57,6 +63,67 @@ public class LecturesHomeActivity extends AppCompatActivity {
 
         fUser = FirebaseAuth.getInstance().getCurrentUser();
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.lectureshome_toolbar);
+        setSupportActionBar(toolbar);
+
+        DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout_lecturehome);
+
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navView = (NavigationView) findViewById(R.id.nav_lectureshome_view_id);
+
+        View headerView = navView.getHeaderView(0);
+        navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                int id = item.getItemId();
+                switch (id) {
+                    //User Profile Page
+                    case R.id.nav_profileBtn_id:
+                        Intent profileIntent = new Intent(LecturesHomeActivity.this, ProfileActivity.class);
+                        profileIntent.putExtra("userInfo", professorInfo);
+                        startActivity(profileIntent);
+                        return true;
+
+                    //Sign Out Btn
+                    case R.id.nav_signoutBtn_id:
+                        FirebaseAuth.getInstance().signOut();
+                        finish();
+                        Intent signoutIntent = new Intent(LecturesHomeActivity.this, LoginActivity.class);
+                        startActivity(signoutIntent);
+                        return true;
+
+                    //Chatroom Page
+                    case R.id.nav_professorsBtn_id:
+                        Intent chatroomIntent = new Intent(LecturesHomeActivity.this, ProfessorFeedActivity.class);
+                        chatroomIntent.putExtra("userInfo", professorInfo);
+                        startActivity(chatroomIntent);
+                        return true;
+
+                    //Main page of events
+                    case R.id.nav_lecturesBtn_id:
+                        //Toast.makeText(EventListActivity.this, "You are already here :D", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(LecturesHomeActivity.this, UsersLectures.class);
+                        startActivity(intent);
+                        return true;
+                    default:
+                }
+                return LecturesHomeActivity.super.onOptionsItemSelected(item);
+            }
+        });
+
+        CircleImageView navProfileImage = (CircleImageView) headerView.findViewById(R.id.nav_profileImage_id);
+        TextView navUsername = (TextView) headerView.findViewById(R.id.nav_username_id);
+        TextView navEmail = (TextView) headerView.findViewById(R.id.nav_email_id);
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        //Navigation Bar
+        if(user != null) navEmail.setText(user.getEmail());
+        //Picasso.with(this).load(studentInfo.getImageRef()).into(navProfileImage);
+        navUsername.setText(professorInfo.getName());
 
 
         lectureRef.addValueEventListener(new ValueEventListener() {
@@ -77,7 +144,7 @@ public class LecturesHomeActivity extends AppCompatActivity {
                     Log.e("E_UniSocial", "GOT AN ERROR!",e);
                 }
 
-                CustomLectureListRow adapter = new CustomLectureListRow(LecturesHomeActivity.this,lectureList);
+                CustomLectureListAdapter adapter = new CustomLectureListAdapter(LecturesHomeActivity.this,lectureList);
                 lectureListView.setAdapter(adapter);
             }
             @Override
